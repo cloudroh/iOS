@@ -29,6 +29,11 @@ countingUp.append("three")
 
 
 let nameByParkingSpace = [13: "Alice", 27: "Cloud"]
+
+for (space, name) in nameByParkingSpace {
+    let permit = "Space \(space): \(name)"
+}
+
 //let space13Assignee = nameByParkingSpace[13]
 let space42Assignee = nameByParkingSpace[42]
 if let space13Assignee = nameByParkingSpace[13] {
@@ -70,4 +75,28 @@ if let r1 = reading1, let r2 = reading2, let r3 = reading3 {
     let errorString = "Instrument reported a reading that is a nil"
 }
 
+enum PieType: Int {
+    case Apple = 0
+    case Cherry
+    case Pecan
+}
+
+//  pieRawValue is a Int type which has 2
+let pieRawValue = PieType.Pecan.rawValue
+
+if let pieType = PieType(rawValue: pieRawValue) {
+    
+}
+
+let favoritePie = PieType.Apple
+
+let name: String
+switch favoritePie {
+case .Apple:
+    name = "Apple"
+case .Cherry:
+    name = "Cherry"
+case .Pecan:
+    name = "Pecan"
+}
 
